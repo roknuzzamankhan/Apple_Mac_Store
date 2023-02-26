@@ -1,0 +1,254 @@
+/* ==================================================
+==============// Basic structure setup //============ 
+===================================================== */
+
+
+/* Imported fonts here: >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+/* ==================================================
+==============// Google fonts Infos //===============
+*
+*   font-family: 'Open Sans', sans-serif;
+*   font-weight: 400,600,700;
+*
+===================================================== */
+
+
+
+/* ==================================================
+>>>>>>>>>>>>>>>>// Reset CSS : Start //<<<<<<<<<<<<<
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+/* ==================================================
+>>>>>>>>>>>>>>>>// Reset CSS : End //<<<<<<<<<<<<<<<
+===================================================== */
+
+
+
+/* ==================================================
+>>>>>>>>>>>>>>// Common CSS : Start //<<<<<<<<<<<<<<<
+===================================================== */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  display: flex;
+}
+
+button {
+  font-size: 16px;
+  padding: .5em 1.5em;
+  margin: 2px;
+  background-color: transparent;
+  border: 1px solid #478BED;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: background-color .2s ease-out;
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -ms-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+}
+
+button:hover, button.selected {
+  background-color: #478BED;
+  color: white;
+}
+/* ==================================================
+>>>>>>>>>>>>>>// Common CSS : End //<<<<<<<<<<<<<<<<<
+===================================================== */
+
+
+
+/* ==================================================
+===========// Main Section CSS : Start //===========
+===================================================== */
+.col {
+  width: 50%;
+}
+
+/* ==================================================
+--------// Product Image Section CSS : Start //------
+===================================================== */
+img {
+  display: block;
+  width: 60%;
+  min-width: 230px;
+  margin: 0 auto;
+}
+/* ==================================================
+--------// Product Image Section CSS : End //--------
+===================================================== */
+
+
+/* ==================================================
+--------// Product Info Section CSS : Start //-------
+===================================================== */
+#product_info__title {
+  font-size: clamp(1.2rem, 3vw, 2.5rem); 
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+/* ==================================================
+--------// Product Info Section CSS : End //---------
+===================================================== */
+
+
+/* ==================================================
+// Product Configuration & delivery Section CSS : Start //
+===================================================== */
+.selection_title {
+  font-weight: 600;
+  margin: 20px 0 7px 0;
+}
+/* ==================================================
+// Product Configuration & delivery Section CSS : End //
+===================================================== */
+
+
+/* ==================================================
+-------// Product Price Section CSS : Start //-------
+===================================================== */
+.price_section {
+  margin: 30px 0 0 0;
+  width: 40%;
+  min-width: 200px;
+}
+
+.price_type {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  padding: 5px 0;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+.delivery_charge {
+  border-bottom: 1px solid black;
+}
+
+.total_price {
+  padding: 0 0 0 0;
+  border-bottom: none;
+}
+/* ==================================================
+-------// Product Price Section CSS : End //---------
+===================================================== */
+
+
+/* ==================================================
+---------// Promo Code Section CSS : Start //--------
+===================================================== */
+#apply_promo_code {
+  margin: 40px 0 20px 0;
+}
+
+.promo_input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+#promo_code_field {
+  width: 100%;
+  min-width: 110px;
+  height: 35px;
+  padding: 5px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+}
+
+#promo_code_button {
+  padding: .45em 1.5em;
+  border: 1px solid green;
+}
+
+#promo_code_button:hover {
+  background-color: green;
+}
+/* ==================================================
+---------// Promo Code Section CSS : End //----------
+===================================================== */
+
+
+/* ==================================================
+===========// Main Section CSS : End //==============
+===================================================== */
+
+
+
+/* ==================================================
+===========// Footer Section CSS : Start //============
+===================================================== */
+footer {
+  border-top: 1px solid rgba(128, 128, 128, 0.26);
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); 
+  font-weight: 600;
+}
+/* ==================================================
+===========// Footer Section CSS : End //============
+===================================================== */
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* xxxxxxxxxxxxxxxxxxx Media Query xxxxxxxxxxxxxxxxxx */
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .col {
+    width: 100%;
+  }
+
+  img {
+    margin: 20px auto;
+  }
+  .selection_title {
+    text-align: center;
+  }
+  button {
+    display: block;
+    margin: 5px auto;
+  }
+  .price_section {
+    width: 100%;
+  }
+  #apply_promo_code {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .promo_input {
+    width: 100%;
+    align-items: center;
+  }
+  #promo_code_field {
+    margin: 0 5px 0 0;
+  }
+}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
